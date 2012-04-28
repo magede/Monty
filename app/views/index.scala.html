@@ -1,0 +1,21 @@
+@(myForm: Form[String])
+@import helper._
+
+
+@main("Win the car!") {
+    
+    <h1>Hi and welcome.</h2>
+    <br />
+    Choose the right door and win a car!
+    
+    Enter your name: 
+    
+    @form(action = routes.Application.newGame()) {
+    	In da form!
+    	
+    	@inputText(myForm("playerName"), 'placeholder -> "Player name", '_label -> "Name: ")
+    	
+    	<input class="button gray" type="submit" value="Submit">
+    	
+    } 
+}
